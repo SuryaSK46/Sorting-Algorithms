@@ -1,5 +1,5 @@
 # Selection sort and Insertion sort
-## Date 
+## Date:
 ## Aim:
 To write a program to perform selection sort and insertion sort using python programming.
 ## Equipment’s required:
@@ -21,33 +21,52 @@ To write a program to perform selection sort and insertion sort using python pro
 ## Program:
 i)	#Selection Sort
 ```
-Unsorted=eval(input())
-def selsort(Unsorted):
-  n = len(Unsorted)
-  for i in range(n-1):
-    min_pos = i
-    for j in range(i,n):
-      if Unsorted[j]<Unsorted[min_pos]:
-        Unsorted[j],Unsorted[min_pos] = Unsorted[min_pos],Unsorted[j]
-  return Unsorted
-print(selsort(Unsorted))
+'''
+ program to sort the elements in the list using the Selection Sort algorithm.
+ developed by:Arularasi U
+ register number:212223100002
+'''
+num=eval(input())
+for i in range(len(num)):
+    low=i
+    for j in range(i+1,len(num)):
+        if num[j]<num[low]:
+            low=j
+    num[i],num[low]=num[low],num[i]
+print(num)
+
+
+
 
 ```
 ii)	#Insertion Sort
 ```
-def Insertionsort(arr):
-  for i in range(1,len(arr)):
-    j = i
-    while arr[j]<arr[j-1] and j>0:
-      arr[j],arr[j-1] = arr[j-1], arr[j]
-      j-=1
-  return arr
-arr = eval(input())
-print(Insertionsort(arr))
+'''
+ program to sort the elements in the list using the Insertion Sort algorithm.
+ developed by:Surya S K
+ register number:21222210052
+'''
+num=eval(input())
+for i in range(1,len(num)):
+    insert=num[i]
+    j=i-1
+    while j>=0 and num[j]>=insert:
+        num[j+1]=num[j]
+        j=j-1
+    num[j+1]=insert
+print(num)
+
+
+
+
+
+
 ```
 
 ## Output:
-![output 1](image.png)
-![output 2](image-1.png)
+![alt text](<Screenshot 2024-04-23 104539-1.png>)
+![alt text](<Screenshot 2024-04-23 104555.png>)
+
+
 ## Result:
 Thus the program is written to perform selection sort and insertion sort using python programming.
